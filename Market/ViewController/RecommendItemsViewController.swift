@@ -1,11 +1,3 @@
-//
-//  RecommendItemsViewControllerTableViewController.swift
-//  Market
-//
-//  Created by takahiro-tomita on 2016/08/16.
-//  Copyright © 2016年 COOKPAD inc,. All rights reserved.
-//
-
 import UIKit
 import APIKit
 
@@ -16,6 +8,9 @@ class RecommendItemsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = RecommendItemCell.height
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,5 +41,16 @@ class RecommendItemsViewController: UITableViewController {
         cell.update(withItem: item);
         
         return cell;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? ItemDetailsViewController {
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let item = items[selectedIndexPath.row]
+            destination.itemID = item.id
+        }
     }
 }

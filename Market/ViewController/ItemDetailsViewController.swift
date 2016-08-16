@@ -1,6 +1,12 @@
 import UIKit
 
 class ItemDetailsViewController: UIViewController {
+    var itemID: Int = 0
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print(itemID)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
