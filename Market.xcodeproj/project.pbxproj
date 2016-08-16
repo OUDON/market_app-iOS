@@ -22,6 +22,7 @@
 		8A078C131D62D02B008C71EF /* MarketRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C121D62D02B008C71EF /* MarketRequestType.swift */; };
 		8A078C151D62D1BE008C71EF /* RecommendItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C141D62D1BE008C71EF /* RecommendItemsRequest.swift */; };
 		8A078C191D62DB44008C71EF /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C181D62DB44008C71EF /* ItemDetailsViewController.swift */; };
+		8A078C1B1D62DEC5008C71EF /* ItemRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C1A1D62DEC5008C71EF /* ItemRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8A078C121D62D02B008C71EF /* MarketRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketRequestType.swift; sourceTree = "<group>"; };
 		8A078C141D62D1BE008C71EF /* RecommendItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemsRequest.swift; sourceTree = "<group>"; };
 		8A078C181D62DB44008C71EF /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		8A078C1A1D62DEC5008C71EF /* ItemRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				8A078C041D62B246008C71EF /* Item.swift */,
 				8A078C121D62D02B008C71EF /* MarketRequestType.swift */,
 				8A078C141D62D1BE008C71EF /* RecommendItemsRequest.swift */,
+				8A078C1A1D62DEC5008C71EF /* ItemRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A078C1B1D62DEC5008C71EF /* ItemRequest.swift in Sources */,
 				8A078C051D62B246008C71EF /* Item.swift in Sources */,
 				8A078C151D62D1BE008C71EF /* RecommendItemsRequest.swift in Sources */,
 				8A078C031D62A48A008C71EF /* RecommendItemCell.swift in Sources */,

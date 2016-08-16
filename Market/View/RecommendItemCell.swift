@@ -13,4 +13,6 @@ class RecommendItemCell: UITableViewCell {
         descriptionLabel.text = item.desc
         thumbnailImageView.sd_setImageWithURL(item.imageURL)
     }
+    
+    static let height: CGFloat = 96
 }

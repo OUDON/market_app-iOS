@@ -1,11 +1,24 @@
 import UIKit
+import APIKit
 
 class ItemDetailsViewController: UIViewController {
+    var item: Item? = nil
     var itemID: Int = 0
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print(itemID)
+        
+        let request = ItemRequest(id: itemID)
+        Session.sendRequest(request) { result in
+            switch result {
+            case .Success(let response):
+                self.item = response
+                print(response)
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func viewDidLoad() {
