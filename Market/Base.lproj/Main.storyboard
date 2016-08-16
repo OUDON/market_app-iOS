@@ -138,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mf-jf-Is6">
-                                <rect key="frame" x="256" y="438" width="88" height="21"/>
+                                <rect key="frame" x="36" y="438" width="528" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -156,11 +156,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5mf-jf-Is6" secondAttribute="trailing" constant="16" id="2j1-ry-7sP"/>
                             <constraint firstItem="5mf-jf-Is6" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="67d-I5-Nkm"/>
                             <constraint firstItem="jO0-Yx-NMK" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="JJf-fp-sMY"/>
                             <constraint firstItem="ouZ-7H-vJu" firstAttribute="top" secondItem="5mf-jf-Is6" secondAttribute="bottom" constant="8" id="QUZ-Sp-zPa"/>
                             <constraint firstItem="waW-H0-rLY" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="Qtl-Ut-opc"/>
                             <constraint firstItem="RvN-fL-yYE" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="YZI-t9-nIU"/>
+                            <constraint firstItem="5mf-jf-Is6" firstAttribute="leading" secondItem="TJM-NR-Cdq" secondAttribute="leadingMargin" constant="16" id="cT2-cS-hUF"/>
                             <constraint firstItem="jO0-Yx-NMK" firstAttribute="top" secondItem="waW-H0-rLY" secondAttribute="bottom" constant="8" id="rEj-c0-JvE"/>
                             <constraint firstItem="ouZ-7H-vJu" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="tXf-HS-TWB"/>
                             <constraint firstItem="waW-H0-rLY" firstAttribute="top" secondItem="RvN-fL-yYE" secondAttribute="bottom" constant="8" id="ulb-az-A1H"/>
