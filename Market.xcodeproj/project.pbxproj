@@ -12,6 +12,7 @@
 		8A078BF31D629AB9008C71EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A078BF21D629AB9008C71EF /* Assets.xcassets */; };
 		8A078BF61D629AB9008C71EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A078BF41D629AB9008C71EF /* LaunchScreen.storyboard */; };
 		8A078C011D629E5F008C71EF /* RecommendItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C001D629E5F008C71EF /* RecommendItemsViewController.swift */; };
+		8A078C031D62A48A008C71EF /* RecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C021D62A48A008C71EF /* RecommendItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8A078BF51D629AB9008C71EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A078BF71D629AB9008C71EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A078C001D629E5F008C71EF /* RecommendItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemsViewController.swift; sourceTree = "<group>"; };
+		8A078C021D62A48A008C71EF /* RecommendItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		8A078BFE1D629B3B008C71EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A078C021D62A48A008C71EF /* RecommendItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A078C031D62A48A008C71EF /* RecommendItemCell.swift in Sources */,
 				8A078BEA1D629AB9008C71EF /* AppDelegate.swift in Sources */,
 				8A078C011D629E5F008C71EF /* RecommendItemsViewController.swift in Sources */,
 			);

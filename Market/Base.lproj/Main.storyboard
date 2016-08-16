@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -32,13 +33,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X5f-o8-U3F">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="X5f-o8-U3F" customClass="RecommendItemCell" customModule="Market" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X5f-o8-U3F" id="G1S-vu-o9w">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TbG-hX-vvc">
+                                            <rect key="frame" x="8" y="8" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="7lV-1h-02E"/>
+                                                <constraint firstAttribute="height" constant="80" id="sTv-oT-y2V"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNu-qk-Aqx">
+                                            <rect key="frame" x="98" y="10" width="484" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="95i-hA-paM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-iJ-u57">
+                                            <rect key="frame" x="98" y="35" width="484" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="9t3-aL-jLE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-Xw-9mu">
+                                            <rect key="frame" x="98" y="60" width="484" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Ky2-dn-xJk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TbG-hX-vvc" firstAttribute="top" secondItem="G1S-vu-o9w" secondAttribute="topMargin" id="GAk-hD-CqK"/>
+                                        <constraint firstItem="rNu-qk-Aqx" firstAttribute="leading" secondItem="TbG-hX-vvc" secondAttribute="trailing" constant="10" id="OVk-HB-Cxc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Oka-Xw-9mu" secondAttribute="trailing" constant="10" id="OrL-0k-quW"/>
+                                        <constraint firstItem="TbG-hX-vvc" firstAttribute="leading" secondItem="G1S-vu-o9w" secondAttribute="leadingMargin" id="PgY-p9-Vii"/>
+                                        <constraint firstItem="rNu-qk-Aqx" firstAttribute="top" secondItem="G1S-vu-o9w" secondAttribute="topMargin" constant="2" id="PlD-ar-LFz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rNu-qk-Aqx" secondAttribute="trailing" constant="10" id="c6d-gN-g3u"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="h1u-iJ-u57" secondAttribute="trailing" constant="10" id="cQJ-Xv-7vN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Oka-Xw-9mu" secondAttribute="bottom" constant="6" id="mHg-1M-jVl"/>
+                                        <constraint firstItem="h1u-iJ-u57" firstAttribute="leading" secondItem="rNu-qk-Aqx" secondAttribute="leading" id="nAs-OU-qJX"/>
+                                        <constraint firstItem="Oka-Xw-9mu" firstAttribute="leading" secondItem="h1u-iJ-u57" secondAttribute="leading" id="xSv-eE-jp4"/>
+                                        <constraint firstItem="Oka-Xw-9mu" firstAttribute="top" secondItem="h1u-iJ-u57" secondAttribute="bottom" constant="4" id="xZG-LC-CDD"/>
+                                        <constraint firstItem="h1u-iJ-u57" firstAttribute="top" secondItem="rNu-qk-Aqx" secondAttribute="bottom" constant="4" id="yR0-36-PcB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="desctiptionLabel" destination="Oka-Xw-9mu" id="exa-BH-mjk"/>
+                                    <outlet property="nameLabel" destination="rNu-qk-Aqx" id="Mhi-Uf-sC8"/>
+                                    <outlet property="priceLabel" destination="h1u-iJ-u57" id="qUs-Zf-luN"/>
+                                    <outlet property="thumbnailImageView" destination="TbG-hX-vvc" id="Wnr-u1-c8P"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
