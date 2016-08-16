@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 class RecommendItemsViewController: UITableViewController {
     let items: [Item] = [
@@ -17,6 +18,20 @@ class RecommendItemsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let request = RecommendItemsRequest()
+        Session.sendRequest(request) { result in
+            switch result {
+            case .Success(let response):
+                print(response)
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
 
     // MARK: - Table view data source
