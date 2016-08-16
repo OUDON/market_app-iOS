@@ -5,42 +5,33 @@ class ItemDetailsViewController: UIViewController {
     var item: Item? = nil
     var itemID: Int = 0
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(itemID)
-        
         let request = ItemRequest(id: itemID)
         Session.sendRequest(request) { result in
             switch result {
             case .Success(let response):
                 self.item = response
-                print(response)
+                self.update(response)
             case .Failure(let error):
                 print(error)
             }
         }
     }
+    
+    func update(item: Item) {
+        nameLabel.text = item.name
+        priceLabel.text = "\(item.price)円"
+        descriptionLabel.text = item.desc
+        imageView.sd_setImageWithURL(item.imageURL)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

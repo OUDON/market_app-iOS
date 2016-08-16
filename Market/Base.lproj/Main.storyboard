@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="1418" y="0.0"/>
         </scene>
-        <!--Item Details View Controller-->
+        <!--商品詳細-->
         <scene sceneID="6n2-3F-zbb">
             <objects>
                 <viewController id="rce-Tj-OcY" customClass="ItemDetailsViewController" customModule="Market" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,8 +121,60 @@
                     <view key="view" contentMode="scaleToFill" id="TJM-NR-Cdq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RvN-fL-yYE">
+                                <rect key="frame" x="100" y="72" width="400" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Av1-NF-Hx8"/>
+                                    <constraint firstAttribute="height" constant="300" id="Clw-tU-JmW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="dsE-RX-YVO"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="lFZ-zc-1nt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waW-H0-rLY">
+                                <rect key="frame" x="277" y="380" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mf-jf-Is6">
+                                <rect key="frame" x="256" y="438" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-7H-vJu">
+                                <rect key="frame" x="240" y="467" width="120" height="30"/>
+                                <state key="normal" title="カートに追加する"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-Yx-NMK">
+                                <rect key="frame" x="280" y="409" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5mf-jf-Is6" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="67d-I5-Nkm"/>
+                            <constraint firstItem="jO0-Yx-NMK" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="JJf-fp-sMY"/>
+                            <constraint firstItem="ouZ-7H-vJu" firstAttribute="top" secondItem="5mf-jf-Is6" secondAttribute="bottom" constant="8" id="QUZ-Sp-zPa"/>
+                            <constraint firstItem="waW-H0-rLY" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="Qtl-Ut-opc"/>
+                            <constraint firstItem="RvN-fL-yYE" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="YZI-t9-nIU"/>
+                            <constraint firstItem="jO0-Yx-NMK" firstAttribute="top" secondItem="waW-H0-rLY" secondAttribute="bottom" constant="8" id="rEj-c0-JvE"/>
+                            <constraint firstItem="ouZ-7H-vJu" firstAttribute="centerX" secondItem="TJM-NR-Cdq" secondAttribute="centerX" id="tXf-HS-TWB"/>
+                            <constraint firstItem="waW-H0-rLY" firstAttribute="top" secondItem="RvN-fL-yYE" secondAttribute="bottom" constant="8" id="ulb-az-A1H"/>
+                            <constraint firstItem="5mf-jf-Is6" firstAttribute="top" secondItem="jO0-Yx-NMK" secondAttribute="bottom" constant="8" id="vup-Km-kog"/>
+                            <constraint firstItem="RvN-fL-yYE" firstAttribute="top" secondItem="PFb-uL-MdV" secondAttribute="bottom" constant="8" id="wwU-Pl-1Al"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="商品詳細" id="VVq-3n-gMk"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="5mf-jf-Is6" id="Urk-QO-jDp"/>
+                        <outlet property="imageView" destination="RvN-fL-yYE" id="DDc-cI-2yS"/>
+                        <outlet property="nameLabel" destination="waW-H0-rLY" id="bXL-hg-9A0"/>
+                        <outlet property="priceLabel" destination="jO0-Yx-NMK" id="BFC-LN-BNj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETy-6B-bz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
