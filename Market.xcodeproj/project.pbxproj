@@ -13,6 +13,12 @@
 		8A078BF61D629AB9008C71EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A078BF41D629AB9008C71EF /* LaunchScreen.storyboard */; };
 		8A078C011D629E5F008C71EF /* RecommendItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C001D629E5F008C71EF /* RecommendItemsViewController.swift */; };
 		8A078C031D62A48A008C71EF /* RecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C021D62A48A008C71EF /* RecommendItemCell.swift */; };
+		8A078C051D62B246008C71EF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A078C041D62B246008C71EF /* Item.swift */; };
+		8A078C0C1D62CC5A008C71EF /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A078C071D62CC5A008C71EF /* APIKit.framework */; };
+		8A078C0D1D62CC5A008C71EF /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A078C081D62CC5A008C71EF /* FontAwesome.framework */; };
+		8A078C0E1D62CC5A008C71EF /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A078C091D62CC5A008C71EF /* Himotoki.framework */; };
+		8A078C0F1D62CC5A008C71EF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A078C0A1D62CC5A008C71EF /* Result.framework */; };
+		8A078C101D62CC5A008C71EF /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A078C0B1D62CC5A008C71EF /* WebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		8A078BF71D629AB9008C71EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A078C001D629E5F008C71EF /* RecommendItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemsViewController.swift; sourceTree = "<group>"; };
 		8A078C021D62A48A008C71EF /* RecommendItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemCell.swift; sourceTree = "<group>"; };
+		8A078C041D62B246008C71EF /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8A078C071D62CC5A008C71EF /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		8A078C081D62CC5A008C71EF /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
+		8A078C091D62CC5A008C71EF /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		8A078C0A1D62CC5A008C71EF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		8A078C0B1D62CC5A008C71EF /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A078C0C1D62CC5A008C71EF /* APIKit.framework in Frameworks */,
+				8A078C0D1D62CC5A008C71EF /* FontAwesome.framework in Frameworks */,
+				8A078C0E1D62CC5A008C71EF /* Himotoki.framework in Frameworks */,
+				8A078C0F1D62CC5A008C71EF /* Result.framework in Frameworks */,
+				8A078C101D62CC5A008C71EF /* WebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,7 @@
 		8A078BDD1D629AB9008C71EF = {
 			isa = PBXGroup;
 			children = (
+				8A078C061D62CBE8008C71EF /* Frameworks */,
 				8A078BE81D629AB9008C71EF /* Market */,
 				8A078BE71D629AB9008C71EF /* Products */,
 			);
@@ -71,6 +89,7 @@
 		8A078BFD1D629B2F008C71EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A078C041D62B246008C71EF /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +110,18 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8A078C061D62CBE8008C71EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A078C071D62CC5A008C71EF /* APIKit.framework */,
+				8A078C081D62CC5A008C71EF /* FontAwesome.framework */,
+				8A078C091D62CC5A008C71EF /* Himotoki.framework */,
+				8A078C0A1D62CC5A008C71EF /* Result.framework */,
+				8A078C0B1D62CC5A008C71EF /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +132,7 @@
 				8A078BE21D629AB9008C71EF /* Sources */,
 				8A078BE31D629AB9008C71EF /* Frameworks */,
 				8A078BE41D629AB9008C71EF /* Resources */,
+				8A078C111D62CC73008C71EF /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,11 +189,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A078C111D62CC73008C71EF /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesome.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/brew/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A078BE21D629AB9008C71EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A078C051D62B246008C71EF /* Item.swift in Sources */,
 				8A078C031D62A48A008C71EF /* RecommendItemCell.swift in Sources */,
 				8A078BEA1D629AB9008C71EF /* AppDelegate.swift in Sources */,
 				8A078C011D629E5F008C71EF /* RecommendItemsViewController.swift in Sources */,
@@ -279,6 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Market/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.ios.Market;
@@ -290,6 +349,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Market/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.ios.Market;

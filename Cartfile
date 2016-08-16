@@ -1,0 +1,4 @@
+github "ishkawa/APIKit" ~> 2.0.5
+github "ikesyo/Himotoki" ~> 2.1.1
+github "thii/FontAwesome.swift" ~> 0.8.0
+github "rs/SDWebImage" ~> 3.8.1

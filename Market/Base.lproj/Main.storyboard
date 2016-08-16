@@ -28,12 +28,12 @@
         <scene sceneID="yeH-NN-5uW">
             <objects>
                 <tableViewController id="lOR-Cv-LFg" customClass="RecommendItemsViewController" customModule="Market" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nAD-rj-wtG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="nAD-rj-wtG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="X5f-o8-U3F" customClass="RecommendItemCell" customModule="Market" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendItemCell" rowHeight="96" id="X5f-o8-U3F" customClass="RecommendItemCell" customModule="Market" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X5f-o8-U3F" id="G1S-vu-o9w">
@@ -83,17 +83,17 @@
                                         <constraint firstItem="rNu-qk-Aqx" firstAttribute="top" secondItem="G1S-vu-o9w" secondAttribute="topMargin" constant="2" id="PlD-ar-LFz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="rNu-qk-Aqx" secondAttribute="trailing" constant="10" id="c6d-gN-g3u"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="h1u-iJ-u57" secondAttribute="trailing" constant="10" id="cQJ-Xv-7vN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Oka-Xw-9mu" secondAttribute="bottom" constant="6" id="mHg-1M-jVl"/>
                                         <constraint firstItem="h1u-iJ-u57" firstAttribute="leading" secondItem="rNu-qk-Aqx" secondAttribute="leading" id="nAs-OU-qJX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Oka-Xw-9mu" secondAttribute="bottom" constant="6" id="tYI-cR-Ujc"/>
                                         <constraint firstItem="Oka-Xw-9mu" firstAttribute="leading" secondItem="h1u-iJ-u57" secondAttribute="leading" id="xSv-eE-jp4"/>
                                         <constraint firstItem="Oka-Xw-9mu" firstAttribute="top" secondItem="h1u-iJ-u57" secondAttribute="bottom" constant="4" id="xZG-LC-CDD"/>
                                         <constraint firstItem="h1u-iJ-u57" firstAttribute="top" secondItem="rNu-qk-Aqx" secondAttribute="bottom" constant="4" id="yR0-36-PcB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="desctiptionLabel" destination="Oka-Xw-9mu" id="exa-BH-mjk"/>
+                                    <outlet property="descriptionLabel" destination="Oka-Xw-9mu" id="MUh-ts-0Gm"/>
                                     <outlet property="nameLabel" destination="rNu-qk-Aqx" id="Mhi-Uf-sC8"/>
-                                    <outlet property="priceLabel" destination="h1u-iJ-u57" id="qUs-Zf-luN"/>
+                                    <outlet property="priceLabel" destination="h1u-iJ-u57" id="WHa-oU-hOx"/>
                                     <outlet property="thumbnailImageView" destination="TbG-hX-vvc" id="Wnr-u1-c8P"/>
                                 </connections>
                             </tableViewCell>
