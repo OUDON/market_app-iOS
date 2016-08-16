@@ -120,14 +120,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryItemCell" id="dVs-DS-6Hy" customClass="CategoryItemCell" customModule="Market" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="96" id="dVs-DS-6Hy" customClass="CategoryCell" customModule="Market" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dVs-DS-6Hy" id="ln8-mJ-SS2">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n62-zu-2BB">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n62-zu-2BB">
                                             <rect key="frame" x="8" y="8" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="5A5-IL-U6E"/>
@@ -135,7 +135,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7On-n4-s1n">
-                                            <rect key="frame" x="98" y="37.5" width="45" height="21"/>
+                                            <rect key="frame" x="98" y="37" width="45" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="wAq-8W-lfD"/>
                                             </constraints>
@@ -147,6 +147,7 @@
                                     <constraints>
                                         <constraint firstItem="7On-n4-s1n" firstAttribute="leading" secondItem="n62-zu-2BB" secondAttribute="trailing" constant="10" id="1Mg-a0-tLd"/>
                                         <constraint firstItem="7On-n4-s1n" firstAttribute="centerY" secondItem="ln8-mJ-SS2" secondAttribute="centerY" id="OFJ-IF-dm4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="n62-zu-2BB" secondAttribute="bottom" id="nun-d1-aKY"/>
                                         <constraint firstItem="n62-zu-2BB" firstAttribute="top" secondItem="ln8-mJ-SS2" secondAttribute="topMargin" id="qUo-tF-HnY"/>
                                         <constraint firstItem="n62-zu-2BB" firstAttribute="leading" secondItem="ln8-mJ-SS2" secondAttribute="leadingMargin" id="w3h-rQ-X1L"/>
                                     </constraints>
@@ -154,6 +155,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="7On-n4-s1n" id="bbM-xs-rTQ"/>
                                     <outlet property="thumbnailImageView" destination="n62-zu-2BB" id="bYO-0D-yMQ"/>
+                                    <segue destination="h2m-Ci-Ciw" kind="show" id="AEL-yK-PXL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,6 +169,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh9-FW-DZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1418" y="728"/>
+        </scene>
+        <!--カテゴリー内アイテム-->
+        <scene sceneID="dsL-Pw-fs1">
+            <objects>
+                <collectionViewController id="h2m-Ci-Ciw" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HZ6-ud-znj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qDZ-ef-WkD">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gG0-Ra-EvZ">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="h2m-Ci-Ciw" id="CvV-vU-Ng2"/>
+                            <outlet property="delegate" destination="h2m-Ci-Ciw" id="JIa-Vp-dOv"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="カテゴリー内アイテム" id="FS4-is-jEH"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GnC-r1-1Wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2144" y="730"/>
         </scene>
         <!--商品詳細-->
         <scene sceneID="6n2-3F-zbb">
@@ -240,11 +277,11 @@
             </objects>
             <point key="canvasLocation" x="2140" y="-5"/>
         </scene>
-        <!--Item-->
+        <!--おすすめ-->
         <scene sceneID="Wgr-TJ-trD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i04-Dy-GJx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jEg-e1-5E8"/>
+                    <tabBarItem key="tabBarItem" title="おすすめ" image="first" id="jEg-e1-5E8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxU-k5-joB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -259,11 +296,11 @@
             </objects>
             <point key="canvasLocation" x="702" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--カテゴリ-->
         <scene sceneID="Pf4-m4-jfR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WPk-i3-epz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zgB-E7-u3n"/>
+                    <tabBarItem key="tabBarItem" title="カテゴリ" image="second" id="zgB-E7-u3n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="INE-5E-87C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -279,4 +316,8 @@
             <point key="canvasLocation" x="702" y="728"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
